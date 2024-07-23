@@ -1,9 +1,15 @@
 {% extends 'todo/base.html' %}
 
 {% block content %}
+<form action="" method="POST">
+    {% for field in form %}
+    <div class="form-group">
+      <label for="formGroupExampleInput">{{field.label_tag}}</label>
+      <p>{{field}}</p>
+    </div>
+    {%endfor%}
+    {% csrf_token %}
+<button type="submit" class="btn btn-primary">送信</button>
+</form>
 
-{% for field in form %}
-<p>{{field.label_tag}}</p>
-{{field}}
-{%endfor%}
 {% endblock %}
