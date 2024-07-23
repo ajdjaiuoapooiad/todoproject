@@ -2,5 +2,8 @@
 
 {% block content %}
 
-hello
+{% for post in post_list %}
+{{post.title}}
+{{post.text}}
+{%endfor%}
 {% endblock %}
