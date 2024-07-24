@@ -16,10 +16,10 @@
 <a href="{% url 'todo:create'%}">新規登録</a>
 {% for post in post_list %}
 <div class="alert alert-{{post.priority}}" role="alert">
-    <a href=""> <p>{{post.title}}</p></a>
+  <p>{{post.title}}</p>
     <a class='btn btn-primary' href="{% url 'todo:delete' post.pk%}">削除</a>
     <a class="btn btn-info" href="{% url 'todo:update' post.pk%}">編集</a>
-    <a class="btn btn-success" href="">詳細</a>
+    <a class="btn btn-success" href="{% url 'todo:detail' post.pk%}">詳細</a>
 </div>
 
 

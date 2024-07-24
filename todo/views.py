@@ -14,6 +14,10 @@ class CreateView(generic.CreateView):
     def __str__(self):
         return self.title
     
+class DetailView(generic.DetailView):
+    model=Post
+    
+    
 class DeleteView(generic.DeleteView):
     model=Post
     success_url=reverse_lazy('todo:index')
