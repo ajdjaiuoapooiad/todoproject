@@ -6,3 +6,8 @@ class PostCreateForm(forms.ModelForm):
         
         model=Post
         fields=['title','text','priority','duedate']
+        
+class PostUpdateForm(forms.ModelForm):
+    class Meta:
+        model=Post
+        fields=['title','text','priority','duedate']
