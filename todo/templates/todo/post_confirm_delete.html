@@ -1,0 +1,12 @@
+{% extends 'todo/base.html' %}
+
+
+
+{% block content %} 
+<form action="" method="POST">
+
+<button type="submit">削除する</button>
+{%csrf_token%}
+</form>
+
+{% endblock %}

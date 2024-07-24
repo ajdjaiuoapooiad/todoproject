@@ -18,7 +18,7 @@
 <div class="alert alert-{{post.priority}}" role="alert">
     <p>{{post.title}}</p>
     <p>{{post.text}}</p>
-    <a class='btn btn-primary' href="">削除</a>
+    <a class='btn btn-primary' href="{% url 'todo:delete' post.pk%}">削除</a>
     <a class="btn btn-info" href="">編集</a>
     <a class="btn btn-success" href="">詳細</a>
 </div>
